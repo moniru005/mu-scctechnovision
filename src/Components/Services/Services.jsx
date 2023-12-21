@@ -14,7 +14,7 @@ const Services = () => {
         {/* row-1 */}
         <div className="flex flex-col lg:flex-row justify-evenly items-center ">
           {/* Card-1 */}
-          <div className="flex flex-col my-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
+          <div className="flex flex-col my-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96 hover:-mt-4 cursor-pointer hover:animate-pulse">
             <div className="h-56 mt-4 mx-4 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
               <img
                 src={image1}
@@ -31,7 +31,7 @@ const Services = () => {
             </div>
           </div>
           {/* Card-2 */}
-          <div className="flex flex-col my-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
+          <div className="flex flex-col my-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96 hover:-mt-4 cursor-pointer hover:animate-pulse">
             <div className="h-56 mt-4 mx-4 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
               <img
                 src={image2}
@@ -55,7 +55,7 @@ const Services = () => {
         {/* row-2 */}
         <div className="flex flex-col lg:flex-row justify-evenly items-center ">
           {/* Card-1 */}
-          <div className="flex flex-col my-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
+          <div className="flex flex-col my-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96 hover:-mt-4 cursor-pointer hover:animate-pulse">
             <div className="h-56 mt-4 mx-4 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
               <img
                 src={image3}
@@ -72,7 +72,7 @@ const Services = () => {
             </div>
           </div>
           {/* Card-2 */}
-          <div className="flex flex-col my-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
+          <div className="flex flex-col my-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96 hover:-mt-4 cursor-pointer hover:animate-pulse">
             <div className="h-56 mt-4 mx-4 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
               <img
                 src={image4}

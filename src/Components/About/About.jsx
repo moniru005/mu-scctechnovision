@@ -3,7 +3,7 @@ import image from '../../assets/images/about_02.jpg'
 
 const About = () => {
   return (
-    <div className="max-w-[1200px] mx-auto pb-16 font-workSans">
+    <div className="mx-auto pb-16 font-workSans bg-[url('./assets/images/abs-6.jpg')] bg-fixed bg-cover ">
       <div className="-mb-12 lg:mb-0">
         <Title
           heading="Who We Are"

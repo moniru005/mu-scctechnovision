@@ -12,7 +12,7 @@ const Banner = () => {
             <h1 className="text-base  lg:text-5xl text-white">
               <p>SCC Technovision Inc.</p>
               <p  className="lg:py-2">Build a Task Management</p>
-              <p>With a caring perspective...</p>
+              <p>With a caring perspective</p>
             </h1>
             <button className='btn btn-xs lg:btn-md mt-2 lg:mt-6 text-xs lg:text-base'>Let&apos;s Explore </button>
           </div>
