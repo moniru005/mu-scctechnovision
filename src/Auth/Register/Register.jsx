@@ -7,7 +7,6 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import useValidatePhone from "../../Hooks/useValidatePhone";
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
@@ -15,7 +14,6 @@ const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_ke
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
-  const {validatePhoneNumber} = useValidatePhone();
   const {
     register,
     handleSubmit,
@@ -99,9 +97,6 @@ const Register = () => {
               >
                 {/* Name */}
                 <div className="w-full ">
-                  {(selectedValue === "employee" ||
-                    selectedValue === "hr" ||
-                    selectedValue === "admin") && (
                     <input
                       {...register("name", { required: true, maxLength: 20 })}
                       className="p-2 rounded border border-[#00C957] w-full"
@@ -109,95 +104,16 @@ const Register = () => {
                       name="name"
                       placeholder="Name"
                     />
-                  )}
+                  
                   {errors.name && (
                     <span className="text-red-100">
                       Your Full Name is Required
                     </span>
                   )}
                 </div>
-                {/* Designation */}
-                <div className="w-full">
-                  {selectedValue === "employee" && (
-                    <input
-                      {...register("designation", {
-                        required: true,
-                        maxLength: 20,
-                      })}
-                      className="p-2 rounded border border-[#00C957] w-full"
-                      type="text"
-                      placeholder="Designation"
-                    />
-                  )}
-                  {errors.name && (
-                    <span className="text-red-100">
-                      Your Designation is Required
-                    </span>
-                  )}
-                </div>
+                
               </div>
 
-              {/* Bank Account and Salary */}
-              <div
-                className={`${
-                  selectedValue === "employee" ? "flex" : "hidden"
-                } ${selectedValue === "employee" && "gap-2"}`}
-              >
-                {/* Bank Account */}
-                <div className={`w-3/5`}>
-                  {selectedValue === "employee" && (
-                    <input
-                      {...register("bankAccount", {
-                        required: true,
-                        maxLength: 20,
-                      })}
-                      className="p-2 rounded border border-[#00C957] w-full"
-                      type="text"
-                      placeholder="Bank Account"
-                    />
-                  )}
-                  {errors.name && (
-                    <span className="text-red-100">
-                      Your Bank Account is Required
-                    </span>
-                  )}
-                </div>
-                {/* Salary */}
-                <div className={`w-2/5`}>
-                  {selectedValue === "employee" && (
-                    <input
-                      {...register("salary", { required: true, maxLength: 20 })}
-                      className="p-2 rounded border border-[#00C957] w-full"
-                      type="text"
-                      placeholder="Salary"
-                    />
-                  )}
-                  {errors.name && (
-                    <span className="text-red-100">
-                      Your Salary is Required
-                    </span>
-                  )}
-                </div>
-              </div>
-
-              {/* Phone Number */}
-              <div className={`w-full`}>
-                  {(selectedValue === "employee" ||
-                    selectedValue === "hr" ||
-                    selectedValue === "admin")
-                     && (
-                    <input
-                      {...register("phone", { validate: validatePhoneNumber })}
-                      className="p-2 rounded border border-[#00C957] w-full"
-                      type="text"
-                      placeholder="Phone"
-                    />
-                  )}
-                  {errors.phone && (<span className="text-red-200">
-                      {errors.phone.message}
-                    </span>
-                  )}
-                </div>
 
               {/* Email */}
               <div className="w-full">
@@ -260,25 +176,7 @@ const Register = () => {
                 </div>
               </div>
 
-              <div className="w-full">
-                <select
-                id="role"
-                  defaultValue="default"
-                  {...register("role", { required: 'Please select your Role' })}
-                  className="select select-bordered w-full p-2 rounded"
-                >
-                  <option value="">
-                    Select Role
-                  </option>
-                  <option value="employee">Employee</option>
-                  <option value="hr">HR</option>
-                  
-                </select>
-                {errors.role && (<span className="text-red-100">
-                  {errors.role.message}
-                  </span>
-                )}
-              </div>
+              
 
               <label className="text-white">Choose a profile picture</label>
               <input

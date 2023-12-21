@@ -9,8 +9,8 @@ import {
     updateProfile,
   } from "firebase/auth";
   import { createContext, useEffect, useState } from "react";
-  import auth from "../Firebase/Firebase.config";
   import useAxiosPublic from "../Hooks/useAxiosPublic";
+import auth from "../Firebase/Firebase.config";
   
   const googleProvider = new GoogleAuthProvider();
   
