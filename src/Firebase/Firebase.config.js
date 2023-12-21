@@ -7,12 +7,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB_DUW8kMKUQ-IsbCYiZ_h3SIKGgQyohZo",
-  authDomain: "scctechnovision.firebaseapp.com",
-  projectId: "scctechnovision",
-  storageBucket: "scctechnovision.appspot.com",
-  messagingSenderId: "299996103952",
-  appId: "1:299996103952:web:35af771c3d65e17ecb1195"
+    apiKey: "AIzaSyB_DUW8kMKUQ-IsbCYiZ_h3SIKGgQyohZo",
+    authDomain: "scctechnovision.firebaseapp.com",
+    projectId: "scctechnovision",
+    storageBucket: "scctechnovision.appspot.com",
+    messagingSenderId: "299996103952",
+    appId: "1:299996103952:web:35af771c3d65e17ecb1195"
 };
 
 // Initialize Firebase
