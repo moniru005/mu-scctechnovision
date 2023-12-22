@@ -1,8 +1,10 @@
+import { Helmet } from "react-helmet-async";
 import Title from "../Components/Title/Title";
 
 const BlogPage = () => {
   return (
     <div>
+      <Helmet><title>Our Blog</title></Helmet>
       <Title
         heading={"Our Blog"}
         paragraph={

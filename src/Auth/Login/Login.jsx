@@ -1,10 +1,10 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
 import { useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
   const { logIn } = useAuth();
@@ -55,7 +55,7 @@ const Login = () => {
         <title>Login | EMS</title>{" "}
       </Helmet>
       <div className=" my-16 flex flex-col justify-center items-center font-workSans">
-        <div className="w-96  rounded-lg bg-gradient-to-tr from-[#095a90] to-[#6eb6e5] p-6">
+        <div className="w-96  rounded-lg bg-gradient-to-tr from-[#031555] to-[#0C1632] p-6">
           <div className="mb-8">
             <h2 className="text-2xl text-center font-semibold text-white">
               Please Login
@@ -90,7 +90,7 @@ const Login = () => {
               {error && <p className="text-red-100">{error}</p>}
 
               <input
-                className="p-4 border border-[#0064A5] bg-[#0063a5ac] hover:bg-[#0064A5] text-white rounded-lg shadow-black shadow-xl hover:shadow-md cursor-pointer text-lg font-semibold"
+                className="p-4 border border-[#0064A5] bg-slate-900 hover:bg-black text-white rounded-lg shadow-black shadow-xl hover:shadow-md cursor-pointer text-lg font-semibold"
                 type="submit"
                 value="Submit"
               />
@@ -98,7 +98,7 @@ const Login = () => {
             <p className="p-4 text-center text-white">
               New here?
               <Link to="/register">
-                <button className="text-green-200 pl-2">Register</button>
+                <button className="text-green-200 pl-2 ">Register</button>
               </Link>
             </p>
             <div>

@@ -79,7 +79,7 @@ const Register = () => {
         <title>Signup | EMS</title>
       </Helmet>
       <div className=" my-4 flex flex-col justify-center items-center font-workSans">
-        <div className=" rounded-lg bg-gradient-to-tr from-[#095a90] to-[#6eb6e5] p-6">
+        <div className=" rounded-lg bg-gradient-to-tr from-[#031555] to-[#0C1632] p-6">
           <div className="mb-8">
             <h2 className="text-2xl text-center font-semibold text-white">
               Please Sign Up
@@ -187,7 +187,7 @@ const Register = () => {
               />
               {errors.image && <p className="text-red-200">{errors.image.message}</p>}
               <input
-                className="p-2 border border-[#0064A5] bg-[#0063a5ac] hover:bg-[#0064A5]  text-white rounded-lg shadow-black shadow-xl hover:shadow-md cursor-pointer text-lg font-semibold"
+                className="p-2 border border-[#0064A5] bg-slate-900 hover:bg-black  text-white rounded-lg shadow-black shadow-xl hover:shadow-md cursor-pointer text-lg font-semibold"
                 type="submit"
                 value="Submit"
               />

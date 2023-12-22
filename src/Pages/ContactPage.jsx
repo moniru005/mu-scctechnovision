@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Title from "../Components/Title/Title";
 
 const ContactPage = () => {
@@ -6,6 +7,7 @@ const ContactPage = () => {
     }
   return (
     <div className="py-16 bg-[url('./assets/images/abs-3.png')] bg-fixed bg-cover ">
+      <Helmet><title>Contact us</title></Helmet>
       <Title heading={"Contact Us"}></Title>
 
       <div className="max-w-5xl px-4 lg:px-0  flex mx-auto pt-12 ">

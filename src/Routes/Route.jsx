@@ -9,8 +9,11 @@ import BlogPage from "../Pages/BlogPage";
 import ContactPage from "../Pages/ContactPage";
 import Dashboard from "../Layouts/Dashboard";
 import Navbar from "../Components/Navbar/Navbar";
-import Footer from "../Components/Footer/Footer";
 import PrivateRoute from "./PrivateRoute";
+import UserHome from "../Pages/Dashboard/UserHome/UserHome";
+import UserTask from "../Pages/Dashboard/UserTask/UserTask";
+import ToDoList from "../Pages/Dashboard/TaskList/ToDoList";
+import TaskUpdate from "../Pages/Dashboard/TaskList/TaskUpdate";
 
 export const Route = createBrowserRouter([
   {
@@ -55,5 +58,27 @@ export const Route = createBrowserRouter([
         </PrivateRoute>
       </>
     ),
+    children: [
+        {
+            path: '/dashboard',
+            element: <UserHome></UserHome>
+        },
+      {
+        path: "userHome",
+        element: <UserHome></UserHome>,
+      },
+      {
+        path: "userTask",
+        element: <UserTask></UserTask>,
+      },
+      {
+        path: "taskList",
+        element: <ToDoList></ToDoList>,
+      },
+      {
+        path: "tasksUpdate/:id",
+        element: <TaskUpdate></TaskUpdate>,
+      },
+    ],
   },
 ]);

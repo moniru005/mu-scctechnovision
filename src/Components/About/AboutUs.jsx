@@ -1,11 +1,12 @@
 
 import image from '../../assets/images/about_02.jpg'
 import image2 from '../../assets/images/about_01.jpg'
+import { Helmet } from 'react-helmet-async';
 
 const AboutUs = () => {
   return (
     <div className="pt-16 max-w-[1200px] mx-auto pb-16 font-workSans">
-    
+    <Helmet> <title>About Page</title> </Helmet>
     {/* Row-1 */}
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row px-4 lg:px-0 items-center">
         <div className="w-full lg:w-1/2 pb-6 lg:pb-0">

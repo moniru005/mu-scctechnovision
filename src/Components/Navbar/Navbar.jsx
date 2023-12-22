@@ -5,6 +5,7 @@ import "../Navbar/Navbar.css";
 import Swal from "sweetalert2";
 import Loading from "../Loading/Loading";
 import useAuth from "../../Hooks/useAuth";
+import logo from '../../assets/images/logo.png'
 
 
 const Navbar = () => {
@@ -90,15 +91,17 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="mx-auto block w-full max-w-[1200px] border border-white/80 bg-white bg-opacity-80 py-2 px-4 text-white  backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4 font-workSans">
+      <nav className="mx-auto block w-full max-w-[1200px] border border-white/80 bg-white bg-opacity-80 py-2 px-4 text-white  backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-2 font-workSans">
         <div>
           <div className="container mx-auto flex items-center justify-between text-gray-900">
             {/* Logo */}
             <div className="flex flex-col justify-center items-center">
-              
+              <Link to="/">
+              <img className="w-16" src={logo} alt="" />
+              </Link>
               <a
                 href="#"
-                className="mr-4 block cursor-pointer py-1.5 font-sans text-sm font-normal leading-normal text-inherit antialiased"
+                className="mr-4 block cursor-pointer  font-sans text-sm font-normal leading-normal text-inherit antialiased"
               >
                 <span className="uppercase text-2xl font-bold">SCC Techno</span>
               </a>

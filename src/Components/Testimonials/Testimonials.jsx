@@ -9,17 +9,27 @@ import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import { FaQuoteLeft } from "react-icons/fa";
 import Title from "../Title/Title";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import { useQuery } from "@tanstack/react-query";
+import Loading from "../Loading/Loading";
 
 
 const Testimonials = () => {
-  const [reviews, setReviews] = useState([]);
+  const axiosPublic = useAxiosPublic();
 
-  useEffect(() =>{
-    fetch('/reviews.json')
-    .then(res => res.json())
-    .then(data => setReviews(data))
 
-  }, [])
+   const {data: reviews = [], isLoading:loading} = useQuery({
+    queryKey: ['reviews'],
+    queryFn: async() =>{
+      const res = await axiosPublic.get('/reviews');
+      return res.data;
+    }
+   })
+
+   if(loading){
+    <Loading></Loading>
+  }
+
   return (
     <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="2000" className="pt-12 bg-[url('./assets/images/abs-1.jpg')] bg-fixed bg-cover">
       <Title
